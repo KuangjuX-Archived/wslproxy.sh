@@ -21,7 +21,7 @@ GIT_CONFIG_FILE="/home/$USER/.ssh/config"
 # 配置 git
 git config --global http.proxy $PROXY_HTTP
 git config --global https.proxt $PROXY_HTTPS
-echo "Host github.com\n" > $GIT_CONFIG_FILE
+echo "Host github.com" > $GIT_CONFIG_FILE
 echo "    User git" >> $GIT_CONFIG_FILE
 echo "    ProxyCommand nc -v -x $HOST_IP:$HOST_PORT %h %p" >> $GIT_CONFIG_FILE
 
