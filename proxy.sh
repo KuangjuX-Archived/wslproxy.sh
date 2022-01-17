@@ -1,5 +1,5 @@
 HOST_PORT="7890"
-CONFIG_PATH="./config"
+CONFIG_PATH="./wslproxy.sh/config"
 
 # 判断配置文件是否存在
 if [ ! -f "$CONFIG_PATH" ];then
