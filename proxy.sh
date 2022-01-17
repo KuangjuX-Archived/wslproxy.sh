@@ -1,7 +1,15 @@
 HOST_PORT="7890"
+CONFIG_PATH="./config"
+
+# 判断配置文件是否存在
+if [ ! -f "$CONFIG_PATH" ];then
 # 用户输入宿主机 ip
 echo -n "请输入宿主机IP:"
 read HOST_IP
+echo $HOST_IP > $CONFIG_PATH
+else
+HOST_IP=`cat $CONFIG_PATH`
+fi
 PROXY_HTTP="http://$HOST_IP:$HOST_PORT"
 PROXY_HTTPS="https://$HOST_IP:$HOST_PORT"
 
